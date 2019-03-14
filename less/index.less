@@ -1,10 +1,10 @@
 html {
+    background-color: beige; 
     
     #container {
 
     max-width: 1000px;
     text-align: center;
-    
     
         header {
         background-color: green;
@@ -13,19 +13,62 @@ html {
         justify-content: center;
         align-items: center;
     
-        img{
-            margin: 20px;
-            position: absolute;
-            left: 0px;
-            top: 20px;
+            img{
+                margin: 20px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                align-self: center;
+            }
+            
+            nav {
+                order: -1;
+                position: absolute;
+                left: 10px;
+                top: 50px;
+                display: none;
+                
+//            nav.open {
+//                display : block;
+//            }
+                
+                ul {
+                    color: black;
+                    list-style-type: none;
+                    line-height: 2rem;
+                    font-size: 2rem;
+                    text-align: left;
+                    background-color: green;
+                    padding: 20px;   
+                }
+            }
         }
-    }
-    
+        
+        .open {
+            display : block;
+        }
+        
+        .collapse {
+            height: 50px;
+            overflow:hidden;
+        }
+        
+        button {
+//            position:relative;
+//            bottom: 0px;
+        }
+        
+        .expand {
+            height: auto;
+            overflow: scroll;
+        }
+        
         article {
             border: 2px dashed black;
-            border-radius: 15%;
+            border-radius: 20px;
             margin: 10px;
             padding: 10px;
+            background-color: white;
         }
     }  
 }
