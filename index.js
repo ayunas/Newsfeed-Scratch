@@ -9,25 +9,43 @@ hamburger.addEventListener('click', () => { menu.classList.toggle('open');
 console.log('clicked!');
 });
 
-const button = document.querySelector('button');
+const button = document.querySelectorAll('button');
+
 
 
 const article = document.querySelectorAll('article');
 
 
-button.addEventListener('click', () => {
-    article[0].classList.toggle('collapse');
+button.forEach( but => {
     
-    if (button.textContent === 'collapse') {
-        button.textContent = 'expand';
+    but.addEventListener('click', () => {
+//    article[0].classList.toggle('collapse');
+    
+    article.forEach( art => art.classList.toggle('collapse'));
+        
+    
+    
+    if (but.textContent === 'collapse') {
+        but.textContent = 'expand';
     } else {
-         button.textContent = 'collapse';
+         but.textContent = 'collapse';
     }
-});
+    })
+})
+    
+    
+    
 
 
 
-
-
-
-
+//button[0].addEventListener('click', () => {
+////    article[0].classList.toggle('collapse');
+//    
+//    article.forEach( art => art.classList.toggle('collapse'));
+//    
+//    if (button[0].textContent === 'collapse') {
+//        button[0].textContent = 'expand';
+//    } else {
+//         button[0].textContent = 'collapse';
+//    }
+//})
